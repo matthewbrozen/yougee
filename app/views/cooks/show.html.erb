@@ -1,0 +1,9 @@
+<h1> <%= @cook.name %> </h1>
+
+<p>This is  <%= @cook.name %> from <%= @cook.location %></p>
+
+  
+<%= link_to "Edit this cook!", edit_cook_path(@cook) %>
+<%= link_to "Back to the list!", cooks_path %>
+
+<%= link_to "Delete this cook!", cook_path, method: :delete, data: { confirm: "Are you sure you want to delete this cook?"} %>

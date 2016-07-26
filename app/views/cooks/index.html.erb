@@ -1,0 +1,13 @@
+<h1> Yougee Cooks</h1>
+
+<ul>
+    <% @cooks.each do |cook| %>
+        <li>
+            <strong> <%= cook.name %> </strong> - <%= cook.location %>
+            <%= link_to "More info", cook_path(cook) %>
+
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "Produce!", produces_path %>

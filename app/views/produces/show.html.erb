@@ -1,0 +1,9 @@
+<h1> <%= @produce.name %> </h1>
+
+<p>This is  <%= @produce.name %> </p>
+
+
+<%= link_to "Edit this produce!", edit_produce_path(@produce) %>
+<%= link_to "Back to the list!", produces_path %>
+
+<%= link_to "Delete this produce!", produce_path, method: :delete, data: { confirm: "Are you sure you want to delete this produce?"} %>

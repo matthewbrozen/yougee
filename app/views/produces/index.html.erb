@@ -1,0 +1,10 @@
+<h1> Yougee produces</h1>
+
+<ul>
+    <% @produces.each do |produce| %>
+        <li>
+            <strong> <%= produce.name %> </strong> 
+            <%= link_to "More info", produce_path(produce) %>
+        </li>
+    <% end %>
+</ul>

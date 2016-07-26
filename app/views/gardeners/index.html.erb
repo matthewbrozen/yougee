@@ -1,0 +1,12 @@
+<h1> Yougee gardeners</h1>
+
+<ul>
+    <% @gardeners.each do |gardener| %>
+        <li>
+            <strong> <%= gardener.name %> </strong> - <%= gardener.location %>
+            <%= link_to "More info", gardener_path(gardener) %>
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "Produce!", produces_path %>

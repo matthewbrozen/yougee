@@ -1,0 +1,9 @@
+<h1> <%= @gardener.name %> </h1>
+
+<p>This is  <%= @gardener.name %> from <%= @gardener.location %></p>
+
+
+<%= link_to "Edit this gardener!", edit_gardener_path(@gardener) %>
+<%= link_to "Back to the list!", gardeners_path %>
+
+<%= link_to "Delete this gardener!", gardener_path, method: :delete, data: { confirm: "Are you sure you want to delete this gardener?"} %>

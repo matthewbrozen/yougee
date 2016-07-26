@@ -1,0 +1,2 @@
+class ProuduceavailablesController < ApplicationController
+end

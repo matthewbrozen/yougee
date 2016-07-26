@@ -1,0 +1,19 @@
+<h1>Add a new gardener!</h1>
+
+<%= form_for @gardener do |f| %>
+
+    <div>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+    </div>
+
+    <div>
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+    </div>
+
+    <%= f.submit "Add new gardener!" %>
+
+<% end %>
+
+<%= link_to "Back to the list!", gardeners_path %>
