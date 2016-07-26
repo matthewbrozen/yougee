@@ -12,6 +12,6 @@ gardeners = Gardener.create([{name:'Matt', location:'90006'}, {name:'Paul', loca
 
 produces = Produce.create([{name:'apple'}, {name:'carrot'}, {name:'orange'} ])
 
-produceavailables = Produceavailable.create([{produce_id:'1', gardener_id:'1', quantitystarted:20, quanititytaken:0, location:'90006'}, {produce_id:'2', gardener_id:'2', quantitystarted:20, quanititytaken:0, location:'90045'}, {produce_id:'3', gardener_id:'3', quantitystarted:20, quanititytaken     :0, location:'90012'}])
+produceavailables = Produceavailable.create([{produce_id:'1', gardener_id:'1', quantitystarted:20, quanititytaken:0, location:'90006'}, {produce_id:'2', gardener_id:'2', quantitystarted:20, quanititytaken:0, location:'90045'}, {produce_id:'3', gardener_id:'3', quantitystarted:20, quanititytaken:0, location:'90012'}])
 
 produceselecteds = Produceselected.create([{quantity:5, cook_id:1, produceavailable_id:1}, {quantity:5, cook_id:2, produceavailable_id:2}, {quantity:5, cook_id:3, produceavailable_id:3} ])
