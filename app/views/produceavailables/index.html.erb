@@ -1,0 +1,17 @@
+<h1> Yougee produce posted</h1>
+
+<ul>
+    <% @produceavailables.each do |produceavailable| %>
+        <li>
+            <strong> <%= produceavailable.produce_id %> </strong> - <%= produceavailable.gardener_id %> - <%= produceavailable.quantitystarted %> - <%= produceavailable.quanititytaken %> - <%= produceavailable.location %>
+            <!-- <%= link_to "More info", produceavailable_path(produceavailable) %> -->
+
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "produce!", produces_path %>
+
+<%= link_to "edit produce!", edit_produce_path(:id)%>
+
+<%= link_to "Home!", gardeners_path %>

@@ -1,0 +1,14 @@
+<h1> Yougee produce selected</h1>
+
+<ul>
+    <% @produceselecteds.each do |produceselected| %>
+        <li>
+            <strong> <%= produceselected.quantity %> </strong> - <%= produceselected.cook_id %> - <%= produceselected.produceavailable_id %>
+            <!-- <%= link_to "More info", produceselected_path(produceselected) %> -->
+        </li>
+    <% end %>
+</ul>
+
+<%= link_to "Produce!", produces_path %>
+
+<%= link_to "Home!", cooks_path %>

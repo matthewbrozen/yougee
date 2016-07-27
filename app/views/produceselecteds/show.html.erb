@@ -1,0 +1,10 @@
+<h1> <%= @produceselected.name %> </h1>
+
+<p>I want <%= @produceselected.quantity %> for <%=@produceselected.produce_id %> for <%= @produceselected.cook_id %></p>
+
+
+
+<%= link_to "Edit this Select!", edit_produceselected_path(@produceselected) %>
+<%= link_to "Back to the list!", produceselecteds_path %>
+
+<%= link_to "Delete this Select!", produceselected_path, method: :delete, data: { confirm: "Are you sure you want to delete this Selection?"} %>

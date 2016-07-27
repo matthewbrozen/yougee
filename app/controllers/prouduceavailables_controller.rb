@@ -1,2 +1,0 @@
-class ProuduceavailablesController < ApplicationController
-end

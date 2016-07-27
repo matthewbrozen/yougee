@@ -15,8 +15,6 @@ class ProducesController < ApplicationController
     def create
     @produce = Produce.new(produce_params)
 
-    @produce.user= current_user
-
       if @produce.save
         redirect_to produces_path
       else

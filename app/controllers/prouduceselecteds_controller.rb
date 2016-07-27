@@ -1,2 +1,0 @@
-class ProuduceselectedsController < ApplicationController
-end

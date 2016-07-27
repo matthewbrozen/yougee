@@ -1,0 +1,9 @@
+<h1> <%= @produceavailable.name %> </h1>
+
+<p>This is  <%= @produceavailable.name %> from <%= @produceavailable.location %></p>
+
+
+<%= link_to "Edit this Post!", edit_produceavailable_path(@produceavailable) %>
+<%= link_to "Back to the list!", produceavailables_path %>
+
+<%= link_to "Delete this Post!", produceavailable_path, method: :delete, data: { confirm: "Are you sure you want to delete this produceavailable?"} %>

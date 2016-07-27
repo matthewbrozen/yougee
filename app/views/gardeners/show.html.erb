@@ -3,6 +3,7 @@
 <p>This is  <%= @gardener.name %> from <%= @gardener.location %></p>
 
 
+<%= link_to "Make produce available", new_produceavailable_path %>
 <%= link_to "Edit this gardener!", edit_gardener_path(@gardener) %>
 <%= link_to "Back to the list!", gardeners_path %>
 

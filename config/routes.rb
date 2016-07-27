@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: { registrations: "registrations" }
   get 'cooks/Produceavailable'
-
-  devise_for :users
 
   root 'cooks#load'
   get "cooks/" => "cooks#index"
@@ -29,6 +28,27 @@ Rails.application.routes.draw do
   patch "produces/:id" => "produces#update"
   delete "produces/:id" => "produces#destroy"
 
+  resources :produceavailables do
+    resources :produceselecteds
+  end
+
+  #
+  # get "produceselecteds/" => "produceselecteds#index"
+  # get "produceselecteds/new" => "produceselecteds#new", as: :new_produceselected
+  # get "produceselecteds/:id" => "produceselecteds#show", as: :produceselected
+  # get "produceselecteds/:id/edit" => "produceselecteds#edit", as: :edit_produceselected
+  # post "produceselecteds/" => "produceselecteds#create"
+  # patch "produceselecteds/:id" => "produceselecteds#update"
+  # delete "produceselecteds/:id" => "produceselecteds#destroy"
+
+
+  # get "produceavailables/" => "produceavailables#index"
+  # get "produceavailables/new" => "produceavailables#new", as: :new_produceavailable
+  # get "produceavailables/:id" => "produceavailables#show", as: :produceavailable
+  # get "produceavailables/:id/edit" => "produceavailables#edit", as: :edit_produceavailable
+  # post "produceavailables/" => "produceavailables#create"
+  # patch "produceavailables/:id" => "produceavailables#update"
+  # delete "produceavailables/:id" => "produceavailables#destroy"
 
   #
   #

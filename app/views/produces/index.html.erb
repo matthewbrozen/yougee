@@ -3,8 +3,15 @@
 <ul>
     <% @produces.each do |produce| %>
         <li>
-            <strong> <%= produce.name %> </strong> 
+            <strong> <%= produce.name %> </strong>
             <%= link_to "More info", produce_path(produce) %>
         </li>
     <% end %>
 </ul>
+
+
+<!-- if user is cook -->
+<%= link_to "Cooks!", cooks_path %>
+
+<!-- if user is gardener -->
+<%= link_to "Gardeners!", gardeners_path %>

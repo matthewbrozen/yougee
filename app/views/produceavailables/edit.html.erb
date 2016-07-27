@@ -1,0 +1,33 @@
+<h1>Edit this produce!</h1>
+
+<%= form_for @produceavailable do |f| %>
+    <div>
+        <%= f.label :produce_id %>
+        <%= f.text_field :produce_id %>
+    </div>
+
+    <div>
+        <%= f.label :gardener_id %>
+        <%= f.text_field :gardener_id %>
+    </div>
+
+    <div>
+        <%= f.label :quantitystarted %>
+        <%= f.text_field :quantitystarted %>
+    </div>
+
+    <div>
+        <%= f.label :quanititytaken %>
+        <%= f.text_field :quanititytaken %>
+    </div>
+
+    <div>
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+    </div>
+
+    <%= f.submit "Submit these changes!" %>
+
+<% end %>
+
+<%= link_to "Back to the list!", produceavailables_path %>

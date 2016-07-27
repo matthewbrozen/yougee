@@ -1,0 +1,24 @@
+<h1>Add New Produce</h1>
+
+<%= form_for @produceavailable do |f| %>
+
+<div>
+    <%= f.label :produce %>
+    <%= f.collection_select :produce_id, Produce.all, :id, :name %>
+</div>
+
+<div>
+    <%= f.label :quantitystarted %>
+    <%= f.text_field :quantitystarted %>
+</div>
+
+<div>
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+</div>
+
+    <%= f.submit "Add new produce available!" %>
+
+<% end %>
+
+<%= link_to "Back to the list!", produceavailables_path %>

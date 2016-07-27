@@ -1,0 +1,24 @@
+<h1>Add a new Selection!</h1>
+
+<%= form_for @produceselected do |f| %>
+
+div>
+    <%= f.label :quantity %>
+    <%= f.text_field :quantity %>
+</div>
+
+<div>
+    <%= f.label :cook_id%>
+    <%= f.text_field :cook_id %>
+</div>
+
+<div>
+    <%= f.label :produceavailable_id %>
+    <%= f.text_field :produceavailable_id %>
+</div>
+
+    <%= f.submit "Add new selection" %>
+
+<% end %>
+
+<%= link_to "Back to the list!", produceavailables_path %>
