@@ -10,8 +10,4 @@
     <% end %>
 </ul>
 
-<%= link_to "produce!", produces_path %>
-
-<%= link_to "edit produce!", edit_produce_path(:id)%>
-
-<%= link_to "Home!", gardeners_path %>
+<%= link_to "Home!", gardener_path(current_user.profile) %>

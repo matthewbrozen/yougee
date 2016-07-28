@@ -7,6 +7,7 @@ class ProduceavailablesController < ApplicationController
 
     def show
       @produceavailable = Produceavailable.find(params[:id])
+      @produceavailable.gardener = current_user.profile
     end
 
     def new
@@ -17,7 +18,7 @@ class ProduceavailablesController < ApplicationController
       @produceavailable = Produceavailable.new(produceavailable_params)
       @produceavailable.gardener = current_user.profile
       if @produceavailable.save
-        redirect_to produceavailables_path
+        redirect_to gardener_path(current_user.profile)
       else
         render :new
       end

@@ -18,7 +18,7 @@ class ProduceselectedsController < ApplicationController
   @produceselected.cook = current_user.profile
 
     if @produceselected.save
-      redirect_to produceselecteds_path
+      redirect_to produceselecteds_path(current_user.profile)
     else
       render :new
     end
