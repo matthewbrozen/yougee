@@ -1,14 +1,86 @@
-<h1> <%= @cook.name %> </h1>
+<!-- <head>
+<style>
 
-<p>This is  <%= @cook.name %> from <%= @cook.location %></p>
+h1 {
+    color: red;
+    font-size:70px;
+}
 
+#produce{
+  color:green;
+}
+
+#taken{
+  color:blue;
+}
+
+#gardener{
+  color:orange;
+  border-top:2px solid black;
+}
+
+#specific{
+  color:red;
+}
+
+#button{
+  width:100px;
+  line-height:100px;
+  border:2px solid black;
+  background-color:white;
+  text-align:center;
+  position:relative;
+  left:300px;
+}
+
+</style>
+</head> -->
+
+
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style>
+#gardener{
+  color:blue;
+  border-top:2px solid black;
+}
+
+#specific{
+  color:red;
+}
+</style>
+</head>
+
+
+<div class="page-header">
+<h1>Welcome to YouGee Cook <%= @cook.name %> </h1>
+</div>
+<!-- <h1> Welcome to YouGee Cook <%= @cook.name %> </h1> -->
+
+
+<div class="btn-group" role="group">
+   <button type="button" class="btn btn-default"><%= link_to "Available Produce", produces_path %></button>
+ </div>
+
+
+<h2> Produce You Have Selected </h2>
 <% @cook.produceselecteds.each do |ps| %>
-  <%= ps.produceavailable.produce.name %><br>
-  Taken: <%= ps.quantity %> <br>
-  From: <%= ps.produceavailable.gardener.name %> <br>
+  <div id='gardener'>From: <div id='specific'><%= ps.produceavailable.gardener.name %> <br></div></div>
+  <div id='produce'><%= ps.produceavailable.produce.name %><br></div>
+  <div id='taken'>Taken: <%= ps.quantity %> <br></div>
+
 
 <% end %>
 
 
 
-<%= link_to "See produce", produces_path %>
+<div class="btn-group" role="group">
+   <button type="button" class="btn btn-default"><%= link_to "Available Produce", produces_path %></button>
+ </div>

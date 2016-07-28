@@ -1,12 +1,43 @@
-<h1> Yougee produces</h1>
+<head>
+<style>
 
-<ul>
+h1{
+      color: red;
+      font-size:70px;
+  }
+
+#produce{
+  color:blue;
+}
+
+#list{
+  float:left;
+  position:relative;
+  left:400px;
+}
+
+#elements{
+  text-align:center;
+}
+
+#see{
+  line-height:100px;
+  width:100px;
+  border:2px solid black;
+}
+
+</style>
+</head>
+
+<h1> Yougee Produce Categories</h1>
+
+<div id='list'>
     <% @produces.each do |produce| %>
-        <li>
-            <strong> <%= produce.name %> </strong>
-            <%= link_to "More info", produce_path(produce) %>
-        </li>
+        <div id='elements'>
+            <div id='produce'><strong> <%= produce.name %> </strong></div>
+            <div id='see'><%= link_to "More info", produce_path(produce) %></div>
+        </div>
     <% end %>
-</ul>
+</div>
 
 <%= link_to "Cooks!", cook_path(current_user.profile) %>
