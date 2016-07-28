@@ -4,8 +4,7 @@
     <% @produceavailables.each do |produceavailable| %>
         <li>
             <strong> <%= produceavailable.produce.name %> </strong> - <%= produceavailable.gardener.name %> - <%= produceavailable.quantitystarted %> - <%= produceavailable.quanititytaken %> - <%= produceavailable.location %>
-            <!-- <%= link_to "More info", produceavailable_path(produceavailable) %> -->
-
+        
         </li>
     <% end %>
 </ul>

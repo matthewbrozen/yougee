@@ -15,6 +15,12 @@ class ProduceselectedsController < ApplicationController
   def create
   @produceselected = Produceselected.new(produceselected_params)
   @produceselected.cook = current_user.profile
+
+
+  if @produceselected.quantity > @produceselected.produceavailable.quantitystarted - @produceselected.produceavailable.quanititytaken
+    flash[:notice] = "You cannot select more then is available!"
+    redirect_to produce_path(@produceselected.produceavailable.produce)
+  else
   @produceselected.produceavailable.quanititytaken += @produceselected.quantity
   @produceselected.produceavailable.save
 
@@ -23,6 +29,7 @@ class ProduceselectedsController < ApplicationController
     else
       render :new
     end
+  end
   end
 
   def edit
