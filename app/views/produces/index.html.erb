@@ -9,9 +9,4 @@
     <% end %>
 </ul>
 
-
-<!-- if user is cook -->
-<%= link_to "Cooks!", cooks_path %>
-
-<!-- if user is gardener -->
-<%= link_to "Gardeners!", gardeners_path %>
+<%= link_to "Cooks!", cook_path(current_user.profile) %>

@@ -13,12 +13,13 @@ class ProduceselectedsController < ApplicationController
   end
 
   def create
-  @produceselected = Produceselected.new(produceavailable_params)
-
+  @produceselected = Produceselected.new(produceselected_params)
   @produceselected.cook = current_user.profile
+  @produceselected.produceavailable.quanititytaken += @produceselected.quantity
+  @produceselected.produceavailable.save
 
     if @produceselected.save
-      redirect_to produceselecteds_path(current_user.profile)
+      redirect_to cook_path(current_user.profile)
     else
       render :new
     end
@@ -46,6 +47,6 @@ end
 
 private
 def produceselected_params
-  params.require(:produceselected).permit(:produce_id, :gardener_id, :quantitystarted, :quanititytaken, :location)
+  params.require(:produceselected).permit(:produceavailable_id, :cook_id, :quantity)
 end
 end

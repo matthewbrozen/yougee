@@ -17,8 +17,9 @@
     <%= f.text_field :location %>
 </div>
 
+    <%= f.hidden_field :quanititytaken, :value => 0 %>
     <%= f.submit "Add new produce available!" %>
 
 <% end %>
 
-<%= link_to "Back to the list!", produceavailables_path %>
+<%= link_to "Back to your profile!", gardener_path(current_user)%>

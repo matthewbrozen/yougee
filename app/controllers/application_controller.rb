@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   #
 
   def after_sign_in_path_for(resource)
-    if current_user.profile_type == "Gardner"
+    if current_user.profile_type == "Gardener"
       gardener_path(current_user.profile)
     elsif current_user.profile_type == "Cook"
       cook_path(current_user.profile)

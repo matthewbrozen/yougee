@@ -1,16 +1,26 @@
-This is a application for connecting home cooks with gardeners
+YouGee (your veggees!) A app for connecting local gardeners and cooks!
 
-gardeners can post the produce they have to the produce table
+technologies used are: HTML 5, CSS 3, Javascript, jQuery, Bootstrap, ruby, rails, PostgreSQL, heroku and devise
 
-home cooks can search for the produce they want and connect with the gardener who grew it
+Approach taken:
+Break up users into either cooks or gardeners
+gardeners post produce, see all their produce, and see all the posted produce from all gardeners
+cooks can select produce and see all their selections
+use devise to authenticate users and at creation assign them to either cook or gardener
+style with bootstrap
 
-home cooks will have to sign up and login
+Installation/startup instructions:
+clone or download the repo
+open in terminal
+bundle install
+rake db:seed
+rails s
 
-gardeners will have to sign up and login
-
-technologies used are:HTML 5, CSS 3, Javascript, jQuery, Bootstrap, ruby, rails, PostgreSQL, heroku and devise
-
-To start and use this app either clone the repo and then run it on a local server or go to heroku deploy site below
+Unsolved problems and next steps:
+Allowing gardeners to create new produce types instead of hard coded seeds
+Communication between cooks and gardeners on the platform
+Pictures of gardeners produce
+More detailed user profiles
 
 https://damp-plateau-90477.herokuapp.com/
 

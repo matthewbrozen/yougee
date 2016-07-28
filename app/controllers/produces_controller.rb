@@ -6,6 +6,7 @@ class ProducesController < ApplicationController
 
     def show
       @produce = Produce.find(params[:id])
+      @produceselected = Produceselected.new
     end
 
     def new

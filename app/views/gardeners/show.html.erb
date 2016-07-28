@@ -2,6 +2,11 @@
 
 <p>This is  <%= @gardener.name %> from <%= @gardener.location %></p>
 
+<% @gardener.produceavailables.each do |pa| %>
+  <%= pa.produce.name %><br>
+  Started with: <%= pa.quantitystarted %> <br>
+  Taken: <%= pa.quanititytaken %> <br>
+<% end %>
 
 <%= link_to "Make produce available", new_produceavailable_path %>
 
