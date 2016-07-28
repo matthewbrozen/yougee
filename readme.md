@@ -12,5 +12,6 @@ technologies used are:HTML 5, CSS 3, Javascript, jQuery, Bootstrap, ruby, rails,
 
 https://damp-plateau-90477.herokuapp.com/
 
+https://trello.com/b/vWWjc0OB/project-2
 
 ![wireframe](/project2wireframe.png)
