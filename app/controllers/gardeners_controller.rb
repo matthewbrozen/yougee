@@ -18,8 +18,8 @@ class GardenersController < ApplicationController
 
     @gardener.user= current_user
 
-      if @gardender.save
-        redirect_to gardeners_path
+      if @gardener.save
+        redirect_to gardener_path(@gardener)
       else
         render :new
       end
