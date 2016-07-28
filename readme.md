@@ -17,9 +17,9 @@ rake db:seed  | |
 rails s
 
 Unsolved problems and next steps:
-Allowing gardeners to create new produce types instead of hard coded seeds| |
-Communication between cooks and gardeners on the platform|  |
-Pictures of gardeners produce|  |
+Allowing gardeners to create new produce types instead of hard coded seeds  | |
+Communication between cooks and gardeners on the platform |  |
+Pictures of gardeners produce |  |
 More detailed user profiles
 
 https://damp-plateau-90477.herokuapp.com/
