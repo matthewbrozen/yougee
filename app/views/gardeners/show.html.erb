@@ -1,13 +1,30 @@
-<h1> <%= @gardener.name %> </h1>
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-<p>This is  <%= @gardener.name %> from <%= @gardener.location %></p>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<% @gardener.produceavailables.each do |pa| %>
-  <%= pa.produce.name %><br>
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+<h1 class='text-center'> Welcome <%= @gardener.name %> to Yougee, keep growing!</h1>
+
+<p class='text-center'>You can post produce you have grown and see all the produce posted by other gardeners as well</p>
+
+<h4 class='text-center'> Your Posts </h4>
+
+<div class='text-center'><h1><% @gardener.produceavailables.each do |pa| %></h1>
+  <h1><%= pa.produce.name %><br><h1>
   Started with: <%= pa.quantitystarted %> <br>
   Taken: <%= pa.quanititytaken %> <br>
 <% end %>
+</div>
 
-<%= link_to "Make produce available", new_produceavailable_path %>
+<div class="text-center">
+<button class="btn btn-default" type="submit"><%= link_to "Make produce available", new_produceavailable_path %></button>
 
-<%= link_to "All Produce", produceavailables_path %>
+<button class="btn btn-default" type="submit"><%= link_to "All Produce", produceavailables_path %></button>
+</div>

@@ -1,42 +1,3 @@
-<!-- <head>
-<style>
-
-h1 {
-    color: red;
-    font-size:70px;
-}
-
-#produce{
-  color:green;
-}
-
-#taken{
-  color:blue;
-}
-
-#gardener{
-  color:orange;
-  border-top:2px solid black;
-}
-
-#specific{
-  color:red;
-}
-
-#button{
-  width:100px;
-  line-height:100px;
-  border:2px solid black;
-  background-color:white;
-  text-align:center;
-  position:relative;
-  left:300px;
-}
-
-</style>
-</head> -->
-
-
 <head>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -64,11 +25,11 @@ h1 {
 </div>
 
 
-<div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Available Produce", produces_path %></div></div>
+<div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Available Produce", produces_path %></button></div>
 
 <h2> Produce You Have Selected </h2>
 <% @cook.produceselecteds.each do |ps| %>
-  <div id='gardener'>From: <div id='specific'><%= ps.produceavailable.gardener.name %> <br></div></div>
+  <div id='gardener'>Gardener is <div id='specific'><%= ps.produceavailable.gardener.name %> ! <br></div></div>
   <div id='produce'><%= ps.produceavailable.produce.name %><br></div>
   <div id='taken'>Taken: <%= ps.quantity %> <br></div>
 
@@ -77,4 +38,4 @@ h1 {
 
 
 
-<div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Available Produce", produces_path %></div></div>
+<div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Available Produce", produces_path %></button></div>

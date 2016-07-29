@@ -1,43 +1,25 @@
 <head>
-<style>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-h1{
-      color: red;
-      font-size:70px;
-  }
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-#produce{
-  color:blue;
-}
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-#list{
-  float:left;
-  position:relative;
-  left:400px;
-}
-
-#elements{
-  text-align:center;
-}
-
-#see{
-  line-height:100px;
-  width:100px;
-  border:2px solid black;
-}
-
-</style>
 </head>
 
-<h1> Yougee Produce Categories</h1>
+<h1 class="text-center"> Yougee Produce Categories</h1>
 
-<div id='list'>
+
+  <div>
     <% @produces.each do |produce| %>
-        <div id='elements'>
+        <div class='btn' id='elements'>
             <div id='produce'><strong> <%= produce.name %> </strong></div>
-            <div id='see'><%= link_to "More info", produce_path(produce) %></div>
+            <div class="btn btn-default" type="submit" id='see'><%= link_to "See What's Fresh!", produce_path(produce) %></div>
         </div>
     <% end %>
-</div>
+  </div>
 
-<%= link_to "Cooks!", cook_path(current_user.profile) %>
+<div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Home", cook_path(current_user.profile) %></button></div>

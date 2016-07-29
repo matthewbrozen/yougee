@@ -1,12 +1,27 @@
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<div class="text-center">
 <h1> Yougee produce posted</h1>
 
-<ul>
+<button class="btn btn-default" type="submit"><%= link_to "Home!", gardener_path(current_user.profile) %></button>
+<div>
     <% @produceavailables.each do |produceavailable| %>
-        <li>
-            <strong> <%= produceavailable.produce.name %> </strong> - <%= produceavailable.gardener.name %> - <%= produceavailable.quantitystarted %> - <%= produceavailable.quanititytaken %> - <%= produceavailable.location %>
-        
-        </li>
-    <% end %>
-</ul>
+        <div>
+            <strong> <h1>Produce: </h1> <h3><%= produceavailable.produce.name %></h3> </strong> Gardener: <%= produceavailable.gardener.name %> - Starting Amount: <%= produceavailable.quantitystarted %> - Amount taken: <%= produceavailable.quanititytaken %> - Location: <%= produceavailable.location %>
 
-<%= link_to "Home!", gardener_path(current_user.profile) %>
+        </div>
+    <% end %>
+</div>
+
+<button class="btn btn-default" type="submit"><%= link_to "Home!", gardener_path(current_user.profile) %></button>
+
+</div>

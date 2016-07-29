@@ -1,31 +1,53 @@
-<h1> <%= @produce.name %> </h1>
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-<p>This is  <%= @produce.name %> </p>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<% @produce.produceavailables.each do |pa| %>
-  <% if pa.quantitystarted > pa.quanititytaken %>
-    Gardener: <%= pa.gardener.name%> <br>
-    Location: <%= pa.location%> <br>
-    Started with: <%= pa.quantitystarted %> <br>
-    Taken: <%= pa.quanititytaken || 0 || nil %> <br>
-    --------------<br>
-    <%= form_for [pa, @produceselected]  do |f|  %>
-    <p>Select from this gardener</p>
-    <div>
-        <%= f.label :quantity %>
-        <%= f.text_field :quantity %>
-    </div>
+</head>
 
-    <div>
-        <%= f.hidden_field :produceavailable_id, :value => pa.id %>
-    </div>
+  <div class='text-center'>
 
-    <%= f.submit "Add new selection" %>
-    <% end %>
-    ------------------<br>
-  <% end %>
-<% end %>
+    <h1> <%= @produce.name %> </h1>
 
+      <div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Back to the list!", produces_path %></button></div>
 
-<%= link_to "Back to the list!", produces_path %>
+        <p> Please Select the Quantity of Produce you need! </p>
+
+          <div class="panel panel-default">
+            <div class="panel-body"></div>
+          </div>
+
+          <% @produce.produceavailables.each do |pa| %>
+            <% if pa.quantitystarted > pa.quanititytaken %>
+              Gardener: <%= pa.gardener.name%> <br>
+              Location: <%= pa.location%> <br>
+              Started with: <%= pa.quantitystarted %> <br>
+              Taken: <%= pa.quanititytaken || 0 || nil %> <br>
+
+              <%= form_for [pa, @produceselected]  do |f|  %>
+              <h4>Select from this gardener</h4>
+              <div>
+                  <%= f.label :quantity %>
+                  <%= f.text_field :quantity %>
+              </div>
+
+              <div>
+                  <%= f.hidden_field :produceavailable_id, :value => pa.id %>
+              </div>
+
+              <%= f.submit "Add new selection" %>
+
+                <div class="panel panel-default">
+                  <div class="panel-body"></div>
+                    </div>
+                      <% end %>
+                    <% end %>
+                  <% end %>
+                </div>
+
+            <div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Back to the list!", produces_path %></button></div>
