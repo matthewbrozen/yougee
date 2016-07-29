@@ -62,13 +62,9 @@ h1 {
 <div class="page-header">
 <h1>Welcome to YouGee Cook <%= @cook.name %> </h1>
 </div>
-<!-- <h1> Welcome to YouGee Cook <%= @cook.name %> </h1> -->
 
 
-<div class="btn-group" role="group">
-   <button type="button" class="btn btn-default"><%= link_to "Available Produce", produces_path %></button>
- </div>
-
+<div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Available Produce", produces_path %></div></div>
 
 <h2> Produce You Have Selected </h2>
 <% @cook.produceselecteds.each do |ps| %>
@@ -81,6 +77,4 @@ h1 {
 
 
 
-<div class="btn-group" role="group">
-   <button type="button" class="btn btn-default"><%= link_to "Available Produce", produces_path %></button>
- </div>
+<div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Available Produce", produces_path %></div></div>

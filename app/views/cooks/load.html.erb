@@ -1,8 +1,21 @@
-<h1> Yougee </h1>
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-<h2> A platform to connect cooks and gardeners</h2>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
 
 
-<%= link_to "Log In", new_user_session_path %>
+<h1 class="text-center"> Yougee </h1>
 
-<%= link_to "Sign Up", new_user_registration_path %>
+
+<h2 class="text-center"> A platform to connect cooks and gardeners</h2>
+
+
+<div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Log In", new_user_session_path %></button></div>
+
+<div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Sign Up", new_user_registration_path %></button></div>
