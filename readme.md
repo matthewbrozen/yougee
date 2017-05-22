@@ -22,7 +22,7 @@ Communication between cooks and gardeners on the platform |  |
 Pictures of gardeners produce |  |
 More detailed user profiles
 
-https://damp-plateau-90477.herokuapp.com/
+https://vegshare.herokuapp.com/
 
 https://trello.com/b/vWWjc0OB/project-2
 
