@@ -1,41 +1,31 @@
 <head>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-<!-- Latest compiled JavaScript -->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<style>
-#gardener{
-  color:blue;
-  border-top:2px solid black;
-}
+  <!-- Latest compiled JavaScript -->
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-#specific{
-  color:red;
-}
-</style>
 </head>
 
-
-<div class="page-header">
-<h1>Welcome to YouGee Cook <%= @cook.name %> </h1>
+<div class="jumbotron">
+<h1 class="text-center">Welcome to YouGee Cook <%= @cook.name %> </h1>
 </div>
 
-
+<div class="containter">
 <div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Available Produce", produces_path %></button></div>
 
-<h2> Produce You Have Selected </h2>
+<h2 class="text-center"> Produce You Have Selected </h2>
 <% @cook.produceselecteds.each do |ps| %>
-  <div id='gardener'>Gardener is <div id='specific'><%= ps.produceavailable.gardener.name %> ! <br></div></div>
-  <div id='produce'><%= ps.produceavailable.produce.name %><br></div>
-  <div id='taken'>Taken: <%= ps.quantity %> <br></div>
+  <div class="text-center"id='gardener'>Gardener is <div id='specific'><%= ps.produceavailable.gardener.name %><br></div></div>
+  <div class="text-center"id='produce'><%= ps.produceavailable.produce.name %><br></div>
+  <div class="text-center"id='taken'>Taken: <%= ps.quantity %> <br></div>
+  <hr>
 
 
 <% end %>
+</div>
 
-
-
-<div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Available Produce", produces_path %></button></div>
+</div>

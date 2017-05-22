@@ -14,12 +14,24 @@
 
 <p class='text-center'>You can post produce you have grown and see all the produce posted by other gardeners as well</p>
 
-<h4 class='text-center'> Your Posts </h4>
+<br>
+<div class="text-center">
+<button class="btn btn-default" type="submit"><%= link_to "Make produce available", new_produceavailable_path %></button>
+
+<button class="btn btn-default" type="submit"><%= link_to "All Produce", produceavailables_path %></button>
+</div>
+<br>
+
+<h2 class='text-center'> Your Posts </h2>
+<hr>
 
 <div class='text-center'><h1><% @gardener.produceavailables.each do |pa| %></h1>
-  <h1><%= pa.produce.name %><br><h1>
+<% if pa.quantitystarted > pa.quanititytaken %>
+  <h3><%= pa.produce.name %><br><h3>
   Started with: <%= pa.quantitystarted %> <br>
   Taken: <%= pa.quanititytaken %> <br>
+  <hr>
+<% end %>
 <% end %>
 </div>
 

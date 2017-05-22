@@ -1,25 +1,49 @@
-<h1>Add New Produce</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+<h1 class="text-center">Add New Produce</h1>
 
 <%= form_for @produceavailable do |f| %>
 
-<div>
+<div class="text-center">
     <%= f.label :produce %>
     <%= f.collection_select :produce_id, Produce.all, :id, :name %>
 </div>
 
-<div>
+<div class="text-center">
     <%= f.label :quantitystarted %>
     <%= f.text_field :quantitystarted %>
 </div>
 
-<div>
+<div class="text-center">
     <%= f.label :location %>
     <%= f.text_field :location %>
-</div>
+
+<br>
 
     <%= f.hidden_field :quanititytaken, :value => 0 %>
     <%= f.submit "Add new produce available!" %>
 
 <% end %>
+<br>
 
-<%= link_to "Back to your profile!", gardener_path(current_user)%>
+<%= link_to "Back to your profile!", gardener_path(current_user.profile)%>
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,19 +1,41 @@
-<h1>Add a new cook!</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="jumbotron">
+<h1 class="text-center">Add a new cook!</h1>
 
 <%= form_for @cook do |f| %>
 
-    <div>
+    <div class="field text-center">
         <%= f.label :name %>
         <%= f.text_field :name %>
     </div>
 
-    <div>
+    <div class="field text-center">
         <%= f.label :location %>
         <%= f.text_field :location %>
     </div>
 
+<div class="field text-center">
     <%= f.submit "Add new cook!" %>
+    </div>
 
 <% end %>
-
+<div class="field text-center">
 <%= link_to "I want to be a produce provider", new_gardener_path %>
+</div>
+</div>
+</div>
+</body>
+</html>

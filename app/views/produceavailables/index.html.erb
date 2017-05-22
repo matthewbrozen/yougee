@@ -10,15 +10,27 @@
 
 </head>
 <div class="text-center">
-<h1> Yougee produce posted</h1>
+  <div class="panel panel-default">
+    <div class="panel-body">
+<h1> All Produce Posted on Yougee </h1>
+</div>
+</div>
 
 <button class="btn btn-default" type="submit"><%= link_to "Home!", gardener_path(current_user.profile) %></button>
+<br>
+<br>
 <div>
     <% @produceavailables.each do |produceavailable| %>
+    <% if produceavailable.quantitystarted > produceavailable.quanititytaken %>
+    <div class="panel panel-default">
+      <div class="panel-body">
         <div>
             <strong> <h1>Produce: </h1> <h3><%= produceavailable.produce.name %></h3> </strong> Gardener: <%= produceavailable.gardener.name %> - Starting Amount: <%= produceavailable.quantitystarted %> - Amount taken: <%= produceavailable.quanititytaken %> - Location: <%= produceavailable.location %>
 
         </div>
+      </div>
+    </div>
+    <% end %>
     <% end %>
 </div>
 

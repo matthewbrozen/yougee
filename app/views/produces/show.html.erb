@@ -14,13 +14,11 @@
 
     <h1> <%= @produce.name %> </h1>
 
-      <div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Back to the list!", produces_path %></button></div>
+      <div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Back to the list!", produces_path %></button></div><br>
 
+      <div class="panel panel-default">
+        <div class="panel-body">
         <p> Please Select the Quantity of Produce you need! </p>
-
-          <div class="panel panel-default">
-            <div class="panel-body"></div>
-          </div>
 
           <% @produce.produceavailables.each do |pa| %>
             <% if pa.quantitystarted > pa.quanititytaken %>
@@ -42,8 +40,7 @@
 
               <%= f.submit "Add new selection" %>
 
-                <div class="panel panel-default">
-                  <div class="panel-body"></div>
+                </div>
                     </div>
                       <% end %>
                     <% end %>

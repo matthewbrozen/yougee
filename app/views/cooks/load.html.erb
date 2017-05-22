@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -8,14 +10,31 @@
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
+<body>
 
+<div class="page-header">
+  <div class="container">
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="text-center">
+    <img src="http://i.imgur.com/b8lUeeV.jpg" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+  </div>
+    <h1 class="text-center"> Yougee </h1>
+      <h2 class="text-center"> A platform to connect cooks and gardeners</h2>
+    </div>
+  </div>
+  </div>
+</div>
 
-<h1 class="text-center"> Yougee </h1>
-
-
-<h2 class="text-center"> A platform to connect cooks and gardeners</h2>
-
-
+<div class="jumbotron">
+  <div class="container">
+    <p class="text-center"> Are you a cook looking for fresh local produce? Are you a gardener with too much produce? Yougee helps fill in the gap. Simply Create a account, decide if you want to be a cook or a garden and get rocking! After you create a cook account you can view and select available produce from local gardens. Local gardens can post their produce and connect with local cooks. Together we can help build healthy local communities.</p>
+<br>
 <div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Log In", new_user_session_path %></button></div>
-
+<br>
 <div class="text-center"><button class="btn btn-default" type="submit"><%= link_to "Sign Up", new_user_registration_path %></button></div>
+
+</div>
+</div>
+</body>
+</html>
